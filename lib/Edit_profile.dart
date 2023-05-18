@@ -65,7 +65,7 @@ class _E_PoState extends State<E_Po> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -198,7 +198,7 @@ class _E_PoState extends State<E_Po> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(20, 0, 20, 10),
+                                  EdgeInsetsDirectional.fromSTEB(20, 0, 20, 5),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -330,7 +330,7 @@ class _E_PoState extends State<E_Po> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 10),
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 5),
                               child: Column(
                                 children: [
                                   Padding(
@@ -349,7 +349,7 @@ class _E_PoState extends State<E_Po> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 10, 20, 10),
+                                        10, 10, 20, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(30),
                                       child: Card(
@@ -368,7 +368,12 @@ class _E_PoState extends State<E_Po> {
                                                     });
                                                   },
                                                 ),
-                                                Text("โรคเบาหวาน(Diabetes)"),
+                                                Text(
+                                                  "โรคเบาหวาน(Diabetes)",
+                                                  style: TextStyle(
+                                                      fontFamily: 'Kanit',
+                                                      fontSize: 16),
+                                                ),
                                               ],
                                             ),
                                             Row(
@@ -376,17 +381,21 @@ class _E_PoState extends State<E_Po> {
                                                 Row(
                                                   children: [
                                                     Checkbox(
-                                                      value: Diabetes,
+                                                      value: Stroke,
                                                       onChanged: (bool? value) {
                                                         setState(() {
-                                                          Diabetes = value!;
+                                                          Stroke = value!;
                                                           print(
-                                                              " Diabetes = $Diabetes");
+                                                              " Stroke = $Stroke");
                                                         });
                                                       },
                                                     ),
                                                     Text(
-                                                        "โรคเบาหวาน(Diabetes)"),
+                                                      "โรคหลอดเลือดในสมอง(Stroke)",
+                                                      style: TextStyle(
+                                                          fontFamily: 'Kanit',
+                                                          fontSize: 16),
+                                                    ),
                                                   ],
                                                 ),
                                               ],
@@ -396,12 +405,12 @@ class _E_PoState extends State<E_Po> {
                                                 Column(
                                                   children: [
                                                     Checkbox(
-                                                      value: Diabetes,
+                                                      value: Obesity,
                                                       onChanged: (bool? value) {
                                                         setState(() {
-                                                          Diabetes = value!;
+                                                          Obesity = value!;
                                                           print(
-                                                              " Diabetes = $Diabetes");
+                                                              " Obesity = $Obesity");
                                                         });
                                                       },
                                                     )
@@ -409,7 +418,40 @@ class _E_PoState extends State<E_Po> {
                                                 ),
                                                 Column(
                                                   children: [
-                                                    Text("โรคเบาหวาน(Diabetes)")
+                                                    Text(
+                                                      "โรคอ้วน(Obesity)",
+                                                      style: TextStyle(
+                                                          fontFamily: 'Kanit',
+                                                          fontSize: 16),
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Checkbox(
+                                                      value: Hypertension,
+                                                      onChanged: (bool? value) {
+                                                        setState(() {
+                                                          Hypertension = value!;
+                                                          print(
+                                                              " Hypertension = $Hypertension");
+                                                        });
+                                                      },
+                                                    )
+                                                  ],
+                                                ),
+                                                Column(
+                                                  children: [
+                                                    Text(
+                                                      "ความดันโลหิตสูง(Hypertension)",
+                                                      style: TextStyle(
+                                                          fontFamily: 'Kanit',
+                                                          fontSize: 16),
+                                                    )
                                                   ],
                                                 ),
                                               ],
@@ -419,6 +461,64 @@ class _E_PoState extends State<E_Po> {
                                       ),
                                     ),
                                   )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 0, 20, 10),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.red,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          40, 10, 40, 10),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                            20), // กำหนดความโค้งของมุมปุ่ม
+                                      ),
+                                      textStyle: TextStyle(
+                                          fontSize:
+                                              21), // เปลี่ยนสีปุ่มเป็นสีแดง
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                      // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกกด
+                                    },
+                                    child: Text(
+                                      'ยกเลิก',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'kanit'),
+                                    ),
+                                  ),
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          40, 10, 40, 10),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                            20), // กำหนดความโค้งของมุมปุ่ม
+                                      ),
+                                      textStyle: TextStyle(
+                                          fontSize:
+                                              21), // เปลี่ยนสีปุ่มเป็นสีแดง
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                      // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกกด
+                                    },
+                                    child: Text(
+                                      'ยืนยัน',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'kanit'),
+                                    ),
+                                  ),
                                 ],
                               ),
                             )
