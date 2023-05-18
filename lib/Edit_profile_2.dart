@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class E_Po extends StatefulWidget {
+class E_Po_2 extends StatefulWidget {
   @override
-  _E_PoState createState() => _E_PoState();
+  _E_Po_2State createState() => _E_Po_2State();
 }
 
-class _E_PoState extends State<E_Po> {
+class _E_Po_2State extends State<E_Po_2> {
   bool checkEditUsername = true;
   bool checkEditPassword = true;
   TextEditingController textEditingControllerUsername = TextEditingController();
@@ -132,62 +132,6 @@ class _E_PoState extends State<E_Po> {
                                             ),
                                           ],
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    child: Row(
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Text(
-                                              "รหัสผ่าน",
-                                              style: TextStyle(
-                                                  fontFamily: 'Kanit',
-                                                  fontSize: 20),
-                                            )
-                                          ],
-                                        ),
-                                        Column(
-                                          children: [
-                                            Container(
-                                              margin: EdgeInsetsDirectional
-                                                  .fromSTEB(10, 10, 10, 10),
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                color: Color(0XFFD9D9D9),
-                                              ),
-                                              width: 200,
-                                              child: TextField(
-                                                readOnly: checkEditPassword,
-                                                obscureText: checkEditPassword,
-                                                controller:
-                                                    textEditingControllerPassword,
-                                                decoration: InputDecoration(
-                                                    border: InputBorder.none,
-                                                    hintText:
-                                                        'Password'.toString(),
-                                                    suffixIcon: IconButton(
-                                                      icon: Icon(Icons.edit),
-                                                      color: Colors.black,
-                                                      onPressed: () {
-                                                        setState(() {
-                                                          checkEditPassword =
-                                                              !checkEditPassword;
-                                                        });
-                                                      },
-                                                    ),
-                                                    contentPadding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                10, 14, 0, 0)),
-                                              ),
-                                            ),
-                                          ],
-                                        )
                                       ],
                                     ),
                                   ),
