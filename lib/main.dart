@@ -4,6 +4,8 @@ import 'package:project_chd/Call_1669_page.dart';
 import 'package:project_chd/Edit_profile.dart';
 import 'package:project_chd/Edit_profile_2.dart';
 import 'package:project_chd/Main_page.dart';
+import 'package:project_chd/Sign_In.dart';
+import 'package:project_chd/Sign_Up.dart';
 import 'package:project_chd/test.dart';
 import 'Before_assessment_page.dart';
 
@@ -228,6 +230,40 @@ class _MyHomePageState extends State<MyHomePage> {
                     // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
                   },
                   child: const Text('Edit_profile_2'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => S_In(),
+                      ),
+                    );
+                    // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
+                  },
+                  child: const Text('Sign_In'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => S_Up(),
+                      ),
+                    );
+                    // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
+                  },
+                  child: const Text('Sign_Up'),
                 ),
               ],
             ),

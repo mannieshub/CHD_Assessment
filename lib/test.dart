@@ -91,6 +91,34 @@ class _testState extends State<test> {
                 ),
                 // เพิ่ม Widget อื่น ๆ ต่อท้ายได้ตามต้องการ
               ],
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.all(30),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: Card(
+                            color: Colors.amber,
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [Text("ss")],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
