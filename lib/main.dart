@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_chd/Before_chatbot_page.dart';
 import 'package:project_chd/Call_1669_page.dart';
+import 'package:project_chd/Chat_bot_page.dart';
 import 'package:project_chd/Edit_profile.dart';
 import 'package:project_chd/Edit_profile_2.dart';
 import 'package:project_chd/Main_page.dart';
@@ -264,6 +265,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
                   },
                   child: const Text('Sign_Up'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => C_bo(),
+                      ),
+                    );
+                    // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
+                  },
+                  child: const Text('Chat_bot_page'),
                 ),
               ],
             ),

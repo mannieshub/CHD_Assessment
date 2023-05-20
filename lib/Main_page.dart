@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:project_chd/Before_chatbot_page.dart';
 import 'package:project_chd/Call_1669_page.dart';
 import 'package:project_chd/Edit_profile.dart';
+import 'package:project_chd/Sign_In.dart';
 import 'Before_assessment_page.dart';
 
 class M_Pa extends StatefulWidget {
@@ -61,6 +62,12 @@ class _M_PaState extends State<M_Pa> {
                     // ดำเนินการสำหรับเมนูที่ 2
                   } else if (value == 'menu3') {
                     // ดำเนินการสำหรับเมนูที่ 3
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => S_In(),
+                      ),
+                    );
                   }
                 },
                 child: CircleAvatar(

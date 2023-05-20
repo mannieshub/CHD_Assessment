@@ -119,6 +119,33 @@ class _testState extends State<test> {
                   )
                 ],
               ),
+            ),
+            Card(
+              child: Container(
+                padding: EdgeInsets.all(16.0),
+                child: LayoutBuilder(
+                  builder: (BuildContext context, BoxConstraints constraints) {
+                    final screenWidth = MediaQuery.of(context).size.width;
+                    final targetWidth =
+                        screenWidth * 0.5; // กำหนดเป็น 70% ของความกว้างจอจริง
+                    final maxWidth = targetWidth > constraints.maxWidth
+                        ? constraints.maxWidth
+                        : targetWidth;
+
+                    return Wrap(
+                      children: [
+                        Container(
+                          constraints: BoxConstraints(maxWidth: maxWidth),
+                          child: Text(
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lobortis libero, in condimentum mauris.',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
             )
           ],
         ),
