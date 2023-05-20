@@ -41,10 +41,6 @@ class _C_boState extends State<C_bo> {
       text: 'ชีวิตเวรเอ๊ยจากจักรวาลปาร์คแทจุน',
       isSenByme: true,
     ),
-    Massage(
-      text: 'Hi im satan',
-      isSenByme: true,
-    ),
   ];
   @override
   Widget build(BuildContext context) {
