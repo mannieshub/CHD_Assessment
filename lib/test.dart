@@ -137,7 +137,7 @@ class _testState extends State<test> {
                         Container(
                           constraints: BoxConstraints(maxWidth: maxWidth),
                           child: Text(
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lobortis libero, in condimentum mauris.',
+                            'Lorem ipsum dolor sit amet,piscing elit. Sed ac lobortis libero, in condimentum mauris.',
                             style: TextStyle(fontSize: 16),
                           ),
                         ),
