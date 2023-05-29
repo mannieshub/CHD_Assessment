@@ -6,10 +6,25 @@ class test extends StatefulWidget {
 }
 
 class _testState extends State<test> {
+  List<DropdownMenuItem<String>> get dropdownItems {
+    List<DropdownMenuItem<String>> menuItems = [
+      DropdownMenuItem(child: Text("1"), value: "1"),
+      DropdownMenuItem(child: Text("2"), value: "2"),
+      DropdownMenuItem(child: Text("3"), value: "3"),
+      DropdownMenuItem(child: Text("4"), value: "4"),
+    ];
+    return menuItems;
+  }
+
+  String selectedValue = "1";
+
   bool checkEditUsername = false;
   bool checkEditPassword = false;
   TextEditingController textEditingControllerUsername = TextEditingController();
   TextEditingController textEditingControllerPassword = TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
+  String textdd = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,7 +161,61 @@ class _testState extends State<test> {
                   },
                 ),
               ),
-            )
+            ),
+            Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextFormField(
+                    // The validator receives the text that the user has entered.
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      }
+                      return null;
+                    },
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Validate returns true if the form is valid, or false otherwise.
+                        if (_formKey.currentState!.validate()) {
+                          // If the form is valid, display a snackbar. In the real world,
+                          // you'd often call a server or save the information in a database.
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Processing Data')),
+                          );
+                        }
+                      },
+                      child: const Text('Submit'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Text('drop'),
+            Padding(
+              padding: EdgeInsetsDirectional.all(10),
+              child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200], // สีเทา
+                    borderRadius: BorderRadius.circular(15), // กำหนดรูปร่าง
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
+                    child: DropdownButton(
+                        isExpanded: true,
+                        value: selectedValue,
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            selectedValue = newValue!;
+                          });
+                        },
+                        items: dropdownItems),
+                  )),
+            ),
           ],
         ),
       ),

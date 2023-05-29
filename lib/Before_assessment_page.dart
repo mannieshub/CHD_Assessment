@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_chd/Assessment_page.dart';
 
 class B_As extends StatefulWidget {
   @override
@@ -132,6 +133,12 @@ class _B_AsState extends State<B_As> {
                       ),
                       onPressed: () {
                         // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกกด
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => A_Pa(),
+                          ),
+                        );
                       },
                       child: Text(
                         'เริ่มประเมินความเสี่ยง',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_chd/Assessment_page.dart';
 import 'package:project_chd/Before_chatbot_page.dart';
 import 'package:project_chd/Call_1669_page.dart';
 import 'package:project_chd/Chat_bot_page.dart';
@@ -282,6 +283,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
                   },
                   child: const Text('Chat_bot_page'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => A_Pa(),
+                      ),
+                    );
+                    // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
+                  },
+                  child: const Text('Assessment_page'),
                 ),
               ],
             ),

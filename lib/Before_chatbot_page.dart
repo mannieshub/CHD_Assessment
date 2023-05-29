@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_chd/Chat_bot_page.dart';
 
 class B_Ch extends StatefulWidget {
   @override
@@ -9,6 +10,7 @@ class _B_chState extends State<B_Ch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF4FCCBD),
@@ -200,6 +202,12 @@ class _B_chState extends State<B_Ch> {
                             TextStyle(fontSize: 15), // เปลี่ยนสีปุ่มเป็นสีแดง
                       ),
                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => C_bo(),
+                          ),
+                        );
                         // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกกด
                       },
                       child: Text(
