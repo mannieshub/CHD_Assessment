@@ -8,6 +8,7 @@ import 'package:project_chd/Edit_profile_2.dart';
 import 'package:project_chd/Main_page.dart';
 import 'package:project_chd/Sign_In.dart';
 import 'package:project_chd/Sign_Up.dart';
+import 'package:project_chd/chatman.dart';
 import 'package:project_chd/test.dart';
 import 'Before_assessment_page.dart';
 
@@ -300,6 +301,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
                   },
                   child: const Text('Assessment_page'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Home(),
+                      ),
+                    );
+                    // รหัสที่ต้องการให้ทำเมื่อปุ่มถูกแตะหรือกด
+                  },
+                  child: const Text('chatman'),
                 ),
               ],
             ),
