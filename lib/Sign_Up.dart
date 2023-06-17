@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:project_chd/Main_page.dart';
 import 'package:project_chd/Sign_In.dart';
 
-//textformfield 264
+//textformfield 326 username
+//textformfield 453 password
+
 class S_Up extends StatefulWidget {
   @override
   _S_UpState createState() => _S_UpState();
